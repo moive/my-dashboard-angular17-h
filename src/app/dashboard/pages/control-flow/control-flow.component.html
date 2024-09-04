@@ -8,4 +8,17 @@
       <p>***********</p>
     }
   </div>
+  <div class="bg-white rounded p-10">
+    @switch (grade()) {
+      @case ('A') {
+        <p>Arriba de 90</p>
+      }
+      @case ('B') {
+        <p>Arriba de 80</p>
+      }
+      @default {
+        <p>Reprobados</p>
+      }
+    }
+  </div>
 </section>

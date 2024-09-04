@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-control-flow',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './control-flow.component.html',
   styles: ``,
 })
-export default class ControlFlowComponent {}
+export default class ControlFlowComponent {
+  public showContent = signal(false);
+  toggleContent() {
+    this.showContent.update((value) => !value);
+  }
+}

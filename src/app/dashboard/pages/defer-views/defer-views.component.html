@@ -1,1 +1,7 @@
-<p>defer-views works!</p>
+<section class="grid grid-cols-1">
+  @defer(){
+    <app-heavy-loaders-slow cssClass="bg-blue-500" />
+  } @placeholder(minimum 500ms) {
+    <p class="h-[600px] w-full bg-gradient-to-r from-gray-200 to-gray-400 animate-pulse">Loading...</p>
+  }
+</section>

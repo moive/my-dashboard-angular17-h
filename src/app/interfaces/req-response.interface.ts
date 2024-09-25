@@ -8,7 +8,7 @@ export interface UsersResponse {
 }
 
 export interface UserResponse {
-  data: User[];
+  data: User;
   support: Support;
 }
 
